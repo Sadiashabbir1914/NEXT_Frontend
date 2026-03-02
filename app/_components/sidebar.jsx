@@ -17,7 +17,7 @@ export default function Sidebar() {
   return (
     <div>
 
-      <aside className='w-56 bg-gray-400 min-h-5/5 p-4'>
+      <aside className='w-56 bg-gray-400 h-full p-4 m-0'>
         <h2 className='mb-6 text-2xl font-bold'>SkillForge</h2>
         
         <nav className='flex flex-col gap-3'>

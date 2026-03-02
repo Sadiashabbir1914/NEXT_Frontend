@@ -17,7 +17,7 @@ export default async function Blog() {
       {
         blog_data.posts.map(post => (
           <Link key={post.id} href={`/blog/2025/12/${post.id}`}
-          className="block border p-4 mb-4">
+          className="block border p-4 mb-4 ml-50">
             <h2> {post.title} </h2>  
             <p>{post.body} </p> <br />
             <p>Total Views: {post.views} </p>

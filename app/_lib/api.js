@@ -8,6 +8,7 @@ export default function api() {
       <CoursesApi />
       <GetCourse />
       <GetMentors />
+      <GetPaths />
     </div>
   )
 }
@@ -33,7 +34,15 @@ export async function GetCourse(id) {
 }
 
 export async function GetMentors() {
-    const result = await fetch(`https://randomuser.me/api/?results=10`);
+    const result = await fetch(`https://randomuser.me/results/?limit=10`, {
+      cache: "no-cache",
+    });
 
     return result.json();
+}
+
+export async function GetPaths() {
+  await new Promise(res => setTimeout(res, 500));
+
+  return paths;
 }

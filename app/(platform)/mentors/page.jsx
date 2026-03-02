@@ -8,6 +8,7 @@ export const metadata = {
 
 export default async function Mentor() {
     const ment = await GetMentors(); 
+    console.log(ment);
   return (
     <div>
         <h1 className='text-2xl font-bold mb-4'>Mentors</h1>
