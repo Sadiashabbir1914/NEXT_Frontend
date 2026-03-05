@@ -7,12 +7,8 @@ export const metadata = {
 }
 
 export default async function DashboardPage() {
-  const coursePromise = await CoursesApi();
-  const displayedPromise = await GetCourse(1);
 
-  const [course, displayed] = await Promise.all([
-    coursePromise, displayedPromise
-  ]);
+  const [course, displayed] = await Promise.all([CoursesApi(), GetCourse(1)]);
 
   return (
     <div className="p-6">
