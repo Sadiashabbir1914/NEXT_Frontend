@@ -161,34 +161,10 @@ export const PATHS = [
 ];
 
 
-// ─── Helper functions ──────────────────────────────────────────────────────
-
-export function getCourseById(id) {
-  return COURSES.find((c) => c.id === Number(id)) ?? null;
-}
-
-export function getMentorById(id) {
-  return MENTORS.find((m) => m.id === id) ?? null;
-}
-
 export function getCategoryBySlug(slug) {
   return CATEGORIES.find((c) => c.slug === slug) ?? null;
 }
 
 export function getPathBySlug(slug) {
   return PATHS.find((p) => p.slug === slug) ?? null;
-}
-
-export function getBlogById(id) {
-  return BLOG_POSTS.find((p) => p.id === Number(id)) ?? null;
-}
-
-export function getCoursesByCategory(slug) {
-  return COURSES.filter((c) => c.category === slug);
-}
-
-export function getMentorForCourse(courseId) {
-  const course = getCourseById(courseId);
-  if (!course) return null;
-  return getMentorById(course.instructor);
 }
