@@ -2,31 +2,22 @@
 
 import React from 'react';
 import Link from 'next/link';
-import {usePathname} from 'next/navigation';
 
 export default function Sidebar() {
-    const Pathname = usePathname();
-    const linkStyle = (path) => {
-        if(Pathname === path){
-            return "font-bold bg-blue-600";
-        }
-        else{
-            return "";
-        }
-    }
   return (
-    <div>
+    <div className='flex min-h-screen'>
 
-      <aside className='w-56 bg-gray-400 h-full p-4 m-0'>
-        <h2 className='mb-6 text-2xl font-bold'>SkillForge</h2>
+      <aside className='w-56 bg-slate-900 text-slate-200 p-4 m-0'>
+        <h2 className='mb-6 text-2xl font-bold'>SkillForge</h2> <br />
         
         <nav className='flex flex-col gap-3'>
-          <Link href="/dashboard">Dashboard</Link>
-          <Link href="/courses">Courses</Link>
-          <Link href="/mentors">Mentors</Link>
-          <Link href="/paths">Learning Paths</Link>
-          <Link href="/categories">Categories</Link>
-          <Link href="/blog">Blogs</Link>
+          <Link href="/" className='hover:bg-gray-500 h-9 p-9'>Home</Link>
+          <Link href="/dashboard" className='hover:bg-gray-500 h-9 p-9'>Dashboard</Link>
+          <Link href="/courses" className='hover:bg-gray-500 h-9 p-9'>Courses</Link>
+          <Link href="/mentors" className='hover:bg-gray-500 h-9 p-9'>Mentors</Link>
+          <Link href="/paths" className='hover:bg-gray-500 h-9 p-9'>Learning Paths</Link>
+          <Link href="/categories" className='hover:bg-gray-500 h-9 p-9'>Categories</Link>
+          <Link href="/blog" className='hover:bg-gray-500 h-9 p-9'>Blogs</Link>
         </nav>
 
       </aside>

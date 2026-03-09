@@ -1,30 +1,27 @@
-import React from 'react';
-import { GetCategories } from '../categories/page';
-import Link from 'next/link';
+import Link from "next/link";
+import { PATHS } from "@/app/_lib/data";
 
 export const metadata = {
   title: "Learning Paths"
-}
+};
 
-export default async function Category() {
-  const categories = await GetCategories();
-
+export default function Paths() {
   return (
-    <div className="p-6">
-      <h1 className="text-4xl font-bold mb-6">Learning Paths</h1>
+    <div className="p-8">
+      <h1 className="text-4xl font-bold mb-8">Learning Paths</h1> <br />
 
-      <div className="grid grid-cols-2 gap-4">
-        {categories.slice(0,4).map((cat) => (
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 ">
+        {PATHS.map((path) => (
           <Link
-            key={cat.slug}
-            href={`/categories/${cat.slug}`}
-            className="p-4 border rounded hover:bg-gray-100"
+            key={path.slug}
+            href={`/paths/${path.slug}`}
+            className="p-6 border rounded-xl shadow-sm hover:shadow-lg transition bg-gray-300"
           >
-            {cat.name}
+            <h2 className="text-xl font-semibold">{path.title}</h2>
+            <p className="text-gray-600 mt-2">{path.tagline}</p>
           </Link>
         ))}
       </div>
     </div>
-  )
+  );
 }
-

@@ -15,7 +15,7 @@ export default function api() {
 
 
 export async function CoursesApi() {
-    const result = await fetch(`${URL_Path}/products?limit=15`,{
+    const result = await fetch(`${URL_Path}/products?limit=10`,{
         next: {revalidate: 5000}
     })
 
@@ -34,7 +34,7 @@ export async function GetCourse(id) {
 }
 
 export async function GetMentors() {
-    const result = await fetch(`https://randomuser.me/results/?limit=10`, {
+    const result = await fetch(`https://randomuser.me/api/?results=6`, {
       cache: "no-cache",
     });
 

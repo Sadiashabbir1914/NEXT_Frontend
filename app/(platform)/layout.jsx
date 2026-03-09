@@ -3,10 +3,10 @@ import Sidebar from "../_components/sidebar";
 
 export default function PlatformLayout({ children }) {
   return (  
-    <div className="flex">
+    <div className="flex min-h-screen">
     <Sidebar />
     
-    <main className="p-20 flex-1">
+    <main className="flex-1 ml-56 p-6">
     {children}
     </main>
     </div>

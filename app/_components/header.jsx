@@ -11,7 +11,7 @@ export default function HeaderPage() {
         <ul className={styles.navbar}>
         <li><Link href="/" >Home</Link></li>
         <li><Link href="/about" >About</Link></li>
-        <li><Link href="/pricing" >Price</Link></li>
+        <li><Link href="/pricing" >Price |</Link></li>
         <li><Link href="/dashboard" >Dashboard</Link></li>
         </ul>
       </nav>

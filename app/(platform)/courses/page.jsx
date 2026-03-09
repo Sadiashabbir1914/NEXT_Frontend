@@ -10,19 +10,21 @@ export default async function CoursesPage() {
   const data = await CoursesApi();
 
   return (
-    <div>
-      <h1 className="text-4xl text-center">Courses</h1>
+    <>
+    <h1 className="text-4xl text-center">Courses</h1> <br />
+    <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
 
       {data.products.map((course) => (
         <Link key={course.id} href={`/courses/${course.id}`}>
-          <div className="border p-4 m-3 cursor-pointer hover:bg-gray-100">
-            <h2 className="text-2xl text-gray-700">
+          <div className="bg-gray-300 rounded-xl shadow-gray-900 hover:shadow-lg transition p-5 border border-black">
+            <h2 className="text-lg font-semibold text-gray-800">
               {course.title}
             </h2>
-            <p>${course.price}</p>
+            <p className="text-center text-gray-500 mt-1">${course.price}</p> <br />
           </div>
         </Link>
       ))}
     </div>
+    </>
   );
 }

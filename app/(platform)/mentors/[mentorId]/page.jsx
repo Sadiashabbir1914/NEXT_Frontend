@@ -16,10 +16,10 @@ export default function Indi_Mentor() {
 
   return (
     <div>
-      <h2>{mentor.name.first} {mentor.name.last}</h2>
-      <img src={mentor.picture.large} alt="Profile Picture" />
-      <p>Email: {mentor.email}</p>
-      <p>Phone: {mentor.phone}</p>
+      <h2 className='text-3xl font-bold'>{mentor.name.first} {mentor.name.last}</h2>
+      <img src={mentor.picture.large} alt="Profile Picture" /> <br />
+      <p><span className='text-2xl'>Email:</span> {mentor.email}</p> <br />
+      <p><span className='text-2xl'>Phone:</span> {mentor.phone}</p>
     </div>
   );
 }
